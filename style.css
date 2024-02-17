@@ -1,0 +1,104 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.typing-container {
+  text-align: center;
+}
+
+#typing-text {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  border-right: 2px solid;
+  white-space: pre-line;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.highlight {
+  color: red; /* Apply red color to the highlighted text */
+}
+
+
+
+/* trailing hearts animation */
+
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100vh; /* Set the body height to the full viewport height */
+    background-color: #ffccf283;
+}
+
+.centered-image img {
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+:root{
+    --color:red;
+    --size:0;
+}
+* {
+    box-sizing:border-box;
+}
+.heart-container{
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+}
+.heart{
+    width: var(--size);
+    height: var(--size);
+    transform: rotate(45deg);
+    transform-origin: center;
+    position: relative;
+    background: var(--color);
+    margin: 10px auto;
+}
+.heart:before,
+.heart:after{
+    content:"";
+    position:absolute;
+    width:var(--size);
+    height:var(--size);
+    border-radius: 50%;
+    background: var(--color);
+
+}
+.heart:before{
+    left: calc(var(--size)/2 * -1)
+}
+.heart:after{
+    top: calc(var(--size) / 2 * -1)
+
+}
+
+.heart-container {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+
+.centered-image {
+    text-align: center; /* Center inline elements horizontally */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.centered-content {
+    text-align: center;
+}
